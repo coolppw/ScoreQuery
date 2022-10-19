@@ -1,0 +1,17 @@
+syntax="proto3";
+
+package scorequery;
+
+service queryScore{
+    rpc query(queryRequest) returns (queryResponse) {}
+}
+
+message queryRequest {
+    string id = 1;
+    string name = 2;
+    string lesson = 3;
+}
+
+message queryResponse {
+    string score = 1;
+}
